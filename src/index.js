@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
   <Router>
     <Provider store={store}>
-      <App />
+      <App className='App'/>
     </Provider>
   </Router>,
   document.getElementById("root")
