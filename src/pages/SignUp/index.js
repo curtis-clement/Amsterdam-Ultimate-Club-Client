@@ -37,7 +37,8 @@ export default function SignUp() {
       password, 
       phoneNumber, 
       gender, 
-      selfRating));
+      selfRating
+      ));
 
     setFirstName('');
     setLastName('');
