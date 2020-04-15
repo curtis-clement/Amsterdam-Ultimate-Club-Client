@@ -7,6 +7,7 @@ import { selectToken } from "../../store/user/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
+import style from '../../CSS Modules/login.module.css'
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -57,7 +58,7 @@ export default function SignUp() {
           />
         </Form.Group>
         <Form.Group className="mt-5">
-          <Button variant="primary" type="submit" onClick={submitForm}>
+          <Button variant="primary" type="submit" className={style.button} onClick={submitForm}>
             Log in
           </Button>
         </Form.Group>

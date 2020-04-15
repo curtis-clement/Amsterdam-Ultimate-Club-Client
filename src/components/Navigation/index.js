@@ -17,13 +17,13 @@ export default function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand as={NavLink} to="/">
-        YOUR PROJECT NAME
+        Amsterdam Ultimate Club
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={style.nav} fill>
           <NavbarItem path="/" linkText="Home" />
-          <NavbarItem path="/about" linkText="About Us" />
+          <NavbarItem path="/aboutus" linkText="About Us" />
           <NavbarItem path="/whatisultimate" linkText="What Is Ultimate" />
           <NavbarItem path="/cityleague" linkText="City League" />
           <NavbarItem path="/teams" linkText="Teams" />
