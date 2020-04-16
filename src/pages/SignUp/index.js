@@ -119,7 +119,7 @@ return (
             <option value={5}>5</option>
           </select>
         <div className={style.submit}>
-          <button onClick={submitForm}>Submit</button>
+          <button onClick={submitForm}>Sign Up</button>
         </div>
       </form>
     </div>

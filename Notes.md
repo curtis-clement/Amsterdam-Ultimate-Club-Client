@@ -27,3 +27,4 @@ Components
   - What is Ultimate
   - City League
   - Teams
+  - Admin
