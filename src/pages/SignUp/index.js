@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import { signUp } from "../../store/user/actions";
 import { selectToken } from "../../store/user/selectors";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, Link } from "react-router-dom";
-import { Col } from "react-bootstrap";
+import { useHistory} from "react-router-dom";
+import style from '../../CSS Modules/signup.module.css';
 
 export default function SignUp() {
   const [firstName, setFirstName] = useState("");
@@ -50,78 +47,82 @@ export default function SignUp() {
   }
 
 return (
-  <div>
-    <form>
-      <label>First Name</label>
-        <input 
-        firstname='firstName'
-        value={firstName}
-        placeholder='First Name'
-        onChange={event => setFirstName(event.target.value)}
-        required
-        />
-      <label>Last Name</label>
-        <input 
-        lastname='lastName'
-        value={lastName}
-        placeholder='Last Name'
-        onChange={event => setLastName(event.target.value)}
-        required
-        />
-      <label>Email</label>
-        <input 
-        email='email'
-        value={email}
-        placeholder='Email'
-        onChange={event => setEmail(event.target.value)}
-        required
-        />
-      <label>Password</label>
-        <input 
-        password='password'
-        type='password'
-        value={password}
-        placeholder='Password'
-        onChange={event => setPassword(event.target.value)}
-        required
-        />
-      <label>Phone Number</label>
-        <input 
-        phonenumber='phoneNumber'
-        value={phoneNumber}
-        placeholder='Phone Number'
-        onChange={event => setPhoneNumber(event.target.value)}
-        />
-      <label>Gender</label>
-        <select
-        gender='gender'
-        value={gender}
-        type='select'
-        onChange={event => setGender(event.target.value)}
-        required
-        >
-        <option>Select Your Gender</option>
-        <option value='male'>Male</option>
-        <option value='female'>Female</option>
-        <option value='nonbinary'>Non-Binary</option>
-        <option value='noanswer'>Prefer Not To Answer</option>
-        </select>
-      <label>Self Rating</label>
-        <select
-        selfrating='selfRating'
-        value={selfRating}
-        onChange={event => setSelfRating(event.target.value)}
-        >
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-          <option value={5}>5</option>
-        </select>
-
-      <button
-      onClick={submitForm}>Submit</button>
-    </form>
+  <div className={style.wrap}>
+    <div className={style.formwrap}>
+      <h1 className={style.header}>Sign Up</h1>
+      <hr className={style.hr} />
+      <form className={style.form}>
+        <label>First Name</label>
+          <input 
+          firstname='firstName'
+          value={firstName}
+          placeholder='First Name'
+          onChange={event => setFirstName(event.target.value)}
+          required
+          />
+        <label>Last Name</label>
+          <input 
+          lastname='lastName'
+          value={lastName}
+          placeholder='Last Name'
+          onChange={event => setLastName(event.target.value)}
+          required
+          />
+        <label>Email</label>
+          <input 
+          email='email'
+          value={email}
+          placeholder='Email'
+          onChange={event => setEmail(event.target.value)}
+          required
+          />
+        <label>Password</label>
+          <input 
+          password='password'
+          type='password'
+          value={password}
+          placeholder='Password'
+          onChange={event => setPassword(event.target.value)}
+          required
+          />
+        <label>Phone Number</label>
+          <input 
+          phonenumber='phoneNumber'
+          value={phoneNumber}
+          placeholder='Phone Number'
+          onChange={event => setPhoneNumber(event.target.value)}
+          />
+        <label>Gender</label>
+          <select
+          gender='gender'
+          value={gender}
+          type='select'
+          onChange={event => setGender(event.target.value)}
+          required
+          >
+          <option>Select Your Gender</option>
+          <option value='male'>Male</option>
+          <option value='female'>Female</option>
+          <option value='nonbinary'>Non-Binary</option>
+          <option value='noanswer'>Prefer Not To Answer</option>
+          </select>
+        <label>Self Rating</label>
+          <select
+          selfrating='selfRating'
+          value={selfRating}
+          onChange={event => setSelfRating(event.target.value)}
+          >
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+            <option value={5}>5</option>
+          </select>
+        <div className={style.submit}>
+          <button onClick={submitForm}>Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 )
 }
