@@ -27,6 +27,7 @@ export default function Navigation() {
           <NavbarItem path="/whatisultimate" linkText="What Is Ultimate" />
           <NavbarItem path="/cityleague" linkText="City League" />
           <NavbarItem path="/teams" linkText="Teams" />
+          {token ? <NavbarItem path="/admin" linkText="Admin" /> : null}
           {loginLogoutControls}
         </Nav>
       </Navbar.Collapse>

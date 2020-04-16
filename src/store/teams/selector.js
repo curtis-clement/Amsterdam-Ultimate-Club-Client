@@ -1,0 +1,1 @@
+export const selectAllInventory = state => state.teams
