@@ -1,1 +1,3 @@
-export const selectAllInventory = state => state.teams
+export function selectAllTeams(reduxState) {
+  return reduxState.teams;
+}
