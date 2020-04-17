@@ -66,7 +66,7 @@ export const login = (email, password) => {
       });
 
       dispatch(loginSuccess(response.data));
-      dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));
+      dispatch(showMessageWithTimeout("success", false, `Welcome back!`, 2500));
       dispatch(appDoneLoading());
     } catch (error) {
       if (error.response) {

@@ -31,7 +31,7 @@ export default function SignUp() {
   return (
     <div className={style.wrap}>
       <div className={style.formwrap}>
-        <h1 lassName={style.header}>Login In</h1>
+        <h1 className={style.header}>Login In</h1>
         <hr className={style.hr} />
         <form className={style.form}>
           <label>Email</label>
