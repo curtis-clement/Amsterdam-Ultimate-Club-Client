@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllUsers} from '../../store/allusers/action';
 import {selectAllUsers} from '../../store/allusers/selector';
@@ -7,12 +7,16 @@ import style from '../../CSS Modules/admin.module.css';
 export default function Admin() {
   const dispatch = useDispatch();
   const clubRoster = useSelector(selectAllUsers);
+  const [team, setTeam] = useState('');
 
   useEffect(() => {
     dispatch(fetchAllUsers())
   }, [dispatch])
 
-  console.log('WHAT IS THE ROSTER', clubRoster);
+  const createTeam = (event) => {
+    event.preventDefault()
+    console.log(team);
+  } 
 
   return (
     <div>
@@ -24,7 +28,7 @@ export default function Admin() {
         <div>
           {clubRoster.map(player => {
             return (
-              <div>
+              <div key={player.id}>
               <h5>{player.firstName} {player.lastName}</h5>
                 <ul>
                   <li>Email: {player.email}</li>
@@ -36,6 +40,20 @@ export default function Admin() {
             )
           })}
         </div>
+
+          <div className={style.addteam}>
+              <h3>Add Team</h3>
+                <form className={style.submit} onSubmit={createTeam}>
+                    <input 
+                    type='text'
+                    value={team}
+                    placeholder='Enter Team Name'
+                    onChange={event => setTeam(event.target.value)}
+                    required
+                    />
+                  <button type='submit'>Submit</button>
+                </form>
+          </div>
     </div>
   )
 }
