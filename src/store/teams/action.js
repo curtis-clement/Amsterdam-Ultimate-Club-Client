@@ -14,7 +14,7 @@ export const fetchAllTeams = () => {
     dispatch(appLoading)
     try {
       const response = await axios.get(`${apiUrl}/teams`)
-      dispatch(allTeamsFetched(response.data));
+      dispatch(allTeamsFetched(response.data.teams));
     } catch(error) {
       console.log(error.message);
     }
