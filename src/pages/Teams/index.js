@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllTeams} from '../../store/teams/selector';
 import Team from '../../components/Team';
+import style from '../../CSS Modules/teams.module.css';
 
 
 export default function Teams() {
@@ -16,7 +17,10 @@ export default function Teams() {
   console.log('WHAT ARE TEAMS', clubTeams);
   return (
     <div>
-      <h1>Current AUC Club Teams</h1>
+      <div>
+      <h1 className={style.header}>Current AUC Club Teams</h1>
+      </div>
+      <hr className={style.line}/>
       <div>
          {clubTeams.map(team => {
           return (
