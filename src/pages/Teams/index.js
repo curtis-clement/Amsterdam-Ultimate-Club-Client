@@ -7,18 +7,18 @@ import Team from '../../components/Team';
 
 export default function Teams() {
   const dispatch = useDispatch();
-  const allTeams = useSelector(selectAllTeams);
+  const clubTeams = useSelector(selectAllTeams);
 
   useEffect(() => {
     dispatch(fetchAllTeams())
   }, [dispatch])
 
-  console.log('WHAT ARE TEAMS', allTeams);
+  console.log('WHAT ARE TEAMS', clubTeams);
   return (
     <div>
       <h1>Current AUC Club Teams</h1>
       <div>
-        {allTeams.map(team => {
+         {clubTeams.map(team => {
           return (
             <Team 
             key={team.id}
