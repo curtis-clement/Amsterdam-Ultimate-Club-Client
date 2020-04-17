@@ -3,22 +3,26 @@ import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllTeams} from '../../store/teams/selector';
 import Team from '../../components/Team';
+import style from '../../CSS Modules/teams.module.css';
 
 
 export default function Teams() {
   const dispatch = useDispatch();
-  const allTeams = useSelector(selectAllTeams);
+  const clubTeams = useSelector(selectAllTeams);
 
   useEffect(() => {
     dispatch(fetchAllTeams())
   }, [dispatch])
 
-  console.log('WHAT ARE TEAMS', allTeams);
+  console.log('WHAT ARE TEAMS', clubTeams);
   return (
     <div>
-      <h1>Current AUC Club Teams</h1>
       <div>
-        {allTeams.map(team => {
+      <h1 className={style.header}>Current AUC Club Teams</h1>
+      </div>
+      <hr className={style.line}/>
+      <div>
+         {clubTeams.map(team => {
           return (
             <Team 
             key={team.id}
