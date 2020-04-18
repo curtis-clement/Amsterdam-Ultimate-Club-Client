@@ -4,3 +4,8 @@
   background: #D91F27;
   background-size: cover;
 }
+
+.App ::selection {
+  background: #333333;
+  color: #F2F2F2;
+}

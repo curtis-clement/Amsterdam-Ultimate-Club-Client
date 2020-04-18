@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllUsers} from '../../store/allusers/action';
 import {selectAllUsers} from '../../store/allusers/selector';
+import {addTeam} from '../../store/teams/action';
 import style from '../../CSS Modules/admin.module.css';
 
 export default function Admin() {
@@ -15,7 +16,10 @@ export default function Admin() {
 
   const createTeam = (event) => {
     event.preventDefault()
-    console.log(team);
+    console.log('NEW TEAM', team);
+    console.log('ADD TEAM', addTeam)
+    dispatch(addTeam(team));
+    setTeam('');
   } 
 
   return (
