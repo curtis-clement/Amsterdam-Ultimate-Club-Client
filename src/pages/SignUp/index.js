@@ -101,10 +101,10 @@ return (
           required
           >
           <option>Select Your Gender</option>
-          <option value='male'>Male</option>
-          <option value='female'>Female</option>
-          <option value='nonbinary'>Non-Binary</option>
-          <option value='noanswer'>Prefer Not To Answer</option>
+          <option value='M'>Male</option>
+          <option value='F'>Female</option>
+          <option value='N-B'>Non-Binary</option>
+          <option value='NoAnswer'>Prefer Not To Answer</option>
           </select>
         <label>Self Rating</label>
           <select

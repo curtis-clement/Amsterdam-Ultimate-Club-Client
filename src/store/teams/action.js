@@ -1,6 +1,12 @@
 import axios from 'axios';
 import {apiUrl} from '../../config/constants';
-import {appLoading, appDoneLoading} from '../appState/actions';
+import {
+  appLoading, 
+  appDoneLoading,
+  showMessageWithTimeout
+} from '../appState/actions';
+
+export const ADD_NEW_TEAM = 'ADD_NEW_TEAM';
 
 function allTeamsFetched(teams) {
   return {
@@ -19,5 +25,24 @@ export const fetchAllTeams = () => {
       console.log(error.message);
     }
     dispatch(appDoneLoading);
+  }
+}
+
+const addNewTeam = (data) => {
+  return {
+    type: ADD_NEW_TEAM,
+    payload: data
+  }
+};
+
+export const addTeam = (name) => {
+  return async (dispatch, getState) => {
+    const response = axios.post(`${apiUrl}/teams/createteam`,
+    {
+      name
+    });
+    dispatch(addNewTeam(response.data));
+    dispatch(showMessageWithTimeout('Success!', false, 'Posted!', 3000));
+    // dispatch(appDoneLoading())
   }
 }
