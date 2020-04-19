@@ -46,17 +46,23 @@ export default function Admin() {
         </div>
 
           <div className={style.addteam}>
-              <h3>Add Team</h3>
+            <h3 className={style.formheader}>Add Team</h3>
                 <form className={style.submit} onSubmit={createTeam}>
+                    <div>
                     <input 
                     type='text'
                     value={team}
-                    placeholder='Enter Team Name'
                     onChange={event => setTeam(event.target.value)}
                     required
                     />
-                  <button type='submit'>Submit</button>
+                    <label className={style.labelname}>
+                      <span className={style.contentname}>
+                        Team Name
+                      </span>
+                    </label>
+                    </div>
                 </form>
+                  <button className={style.submitbutton} type='submit'>Submit</button>
           </div>
     </div>
   )
