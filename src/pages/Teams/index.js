@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllTeams} from '../../store/teams/selector';
+import {deleteTeamSuccess} from '../../store/admin/action';
 import Team from '../../components/Team';
 import style from '../../CSS Modules/teams.module.css';
 
@@ -14,8 +15,9 @@ export default function Teams() {
     dispatch(fetchAllTeams())
   }, [dispatch])
 
-  const onDelete = name => {
-    console.log('TEAM DELETED', name)
+  const onDelete = id => {
+    console.log('DELETE BUTTON TEST', id)
+    dispatch(deleteTeamSuccess(id))
   }
 
   console.log('WHAT ARE TEAMS', clubTeams);
@@ -36,7 +38,7 @@ export default function Teams() {
 
               <button
               className={style.button}
-              onClick={() => onDelete(team.name)}
+              onClick={() => onDelete(team.id)}
               >Delete</button>
             </div>
           )
