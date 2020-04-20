@@ -14,6 +14,10 @@ export default function Teams() {
     dispatch(fetchAllTeams())
   }, [dispatch])
 
+  const onDelete = name => {
+    console.log('TEAM DELETED', name)
+  }
+
   console.log('WHAT ARE TEAMS', clubTeams);
   return (
     <div>
@@ -24,11 +28,17 @@ export default function Teams() {
       <div>
          {clubTeams.map(team => {
           return (
-            <Team 
-            key={team.id}
-            id={team.id}
-            name={team.name}
-            />
+            <div key={team.id}>
+              <Team 
+              id={team.id}
+              name={team.name}
+              />
+
+              <button
+              className={style.button}
+              onClick={() => onDelete(team.name)}
+              >Delete</button>
+            </div>
           )
         })}
       </div>
