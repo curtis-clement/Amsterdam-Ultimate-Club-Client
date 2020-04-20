@@ -10,3 +10,22 @@
   border: 1px solid #333333;
   border-radius: 5px;
 }
+
+.button {
+  background-color: #333333;
+  color: #F2F2F2;
+  width: 20%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  border-radius: 20px;
+}
+
+.button:hover {
+  color: #333333;
+  background-color: #F2F2F2;
+  border: 2px solid #D91F27;
+}

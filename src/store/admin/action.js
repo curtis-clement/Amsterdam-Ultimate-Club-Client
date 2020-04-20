@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {apiUrl} from '../../config/constants';
-import {selectToekn, selectUser} from '../user/selectors';
+
 
 export const DELETE_TEAM = 'DELETE_TEAM';
 
