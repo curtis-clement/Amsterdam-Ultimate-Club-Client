@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllTeams} from '../../store/teams/selector';
@@ -10,17 +10,17 @@ import style from '../../CSS Modules/teams.module.css';
 export default function Teams() {
   const dispatch = useDispatch();
   const clubTeams = useSelector(selectAllTeams);
+  // const [teams, setTeams] = useState();
 
   useEffect(() => {
     dispatch(fetchAllTeams())
   }, [dispatch])
 
   const onDelete = id => {
-    console.log('DELETE BUTTON TEST', id)
     dispatch(deleteTeamSuccess(id))
+    // setTeams();
   }
 
-  console.log('WHAT ARE TEAMS', clubTeams);
   return (
     <div>
       <div>
