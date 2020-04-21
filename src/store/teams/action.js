@@ -7,6 +7,7 @@ import {
 } from '../appState/actions';
 
 export const ADD_NEW_TEAM = 'ADD_NEW_TEAM';
+export const FETCH_ALL_TEAMS = 'FETCH_ALL_TEAMS';
 
 function allTeamsFetched(teams) {
   return {
@@ -43,6 +44,6 @@ export const addTeam = (name) => {
     });
     dispatch(addNewTeam(response.data));
     dispatch(showMessageWithTimeout('Success!', false, 'Posted!', 3000));
-    // dispatch(appDoneLoading())
+    dispatch(appDoneLoading())
   }
 }
