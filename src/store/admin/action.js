@@ -11,7 +11,6 @@ const deleteTeam = team => ({
 
 export const deleteTeamSuccess = teamId => {
   return async (dispatch, getState) => {
-    // console.log('DELETE TEAM SUCCESS', teamId)
     try {
       const response = await axios.delete(`${apiUrl}/teams/deleteteam/${teamId}`)
       console.log('TEAM DELETED', response.data)
