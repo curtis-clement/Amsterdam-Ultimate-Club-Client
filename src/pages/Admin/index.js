@@ -28,11 +28,14 @@ export default function Admin() {
       <h1 className={style.header}>Administrative Panel</h1>
       </div>
       <hr className={style.line}/>
+
+      <div className={style.roster}>
       <h3>Roster</h3>
-        <div>
+        <div className={style.player}>
           {clubRoster.map(player => {
             return (
-              <div key={player.id}>
+              <div>
+              <div key={player.id} >
               <h5>{player.firstName} {player.lastName}</h5>
                 <ul>
                   <li>Email: {player.email}</li>
@@ -41,9 +44,11 @@ export default function Admin() {
                   <li>Rating: {player.selfRating}</li>
                 </ul>
               </div>
+              </div>
             )
           })}
         </div>
+      </div>
         
           <form className={style.addteam}>
                <h3>Add Team</h3>

@@ -5,6 +5,7 @@ import teampic from '../../images/teampic.jpg';
 export default function AboutUs() {
   return (
     <div className={style.body}>
+      <div className={style.items}>
       <div>
         <h1 className={style.header}>About Our Club</h1>
         <hr className={style.line}/>
@@ -31,6 +32,14 @@ export default function AboutUs() {
             this amazing sport we love!
           </p>
         </div>
+      </div>
+      <br />
+
+      <div className={style.mailing}>
+          <h4>If you would like details on current AUC happenings please joing out mailing list here!</h4>
+          <br/>
+          <button className={style.button}>I Want to be Informed!</button>
+      </div> 
       </div>
     </div>
   )
