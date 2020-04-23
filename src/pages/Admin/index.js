@@ -4,6 +4,7 @@ import {fetchAllUsers} from '../../store/allusers/action';
 import {selectAllUsers} from '../../store/allusers/selector';
 import {addTeam} from '../../store/teams/action';
 import style from '../../CSS Modules/admin.module.css';
+import {Link} from 'react-router-dom';
 
 export default function Admin() {
   const dispatch = useDispatch();
@@ -64,13 +65,13 @@ export default function Admin() {
                       <span className={style.contentname}>Team Name</span>
                     </label>
                  </div>
-                <div>
+                <Link to={'/emaillist'}>
                   <button 
                    className={style.button}
                    type='submit'>
                      Submit
                   </button>
-                </div>
+                </Link>
           </form>
     </div>
   )

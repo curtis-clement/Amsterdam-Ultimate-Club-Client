@@ -13,7 +13,6 @@ import WhatIsUltimate from './pages/WhatIsUltimate';
 import CityLeague from './pages/CityLeague';
 import Teams from './pages/Teams';
 import Admin from './pages/Admin';
-import EmailListForm from './components/EmailListForm';
 
 import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
@@ -41,7 +40,10 @@ function App() {
         <Route path="/admin" component={Admin} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
-        <Route path='/emaillist' component={EmailListForm} />
+        <Route path='/emaillist' component={() => { 
+          window.location.href = 'https://mailchi.mp/490e1c05228d/aucmaillistsignup'; 
+          return null;
+        }}/>
       </Switch>
     </div>
   );
