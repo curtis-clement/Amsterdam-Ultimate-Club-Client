@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import style from '../../CSS Modules/aboutus.module.css';
 import teampic from '../../images/teampic.jpg';
 
@@ -38,7 +39,9 @@ export default function AboutUs() {
       <div className={style.mailing}>
           <h4>If you would like details on current AUC happenings please joing out mailing list here!</h4>
           <br/>
-          <button className={style.button}>I Want to be Informed!</button>
+          <Link to={'/emaillist'}>
+            <button className={style.button}>I Want to be Informed!</button>
+          </Link>
       </div> 
       </div>
     </div>
