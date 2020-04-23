@@ -13,6 +13,7 @@ export default function Admin() {
   const clubRoster = useSelector(selectAllUsers);
   const clubTeams = useSelector(selectAllTeams);
   const [team, setTeam] = useState('');
+  const [player, setPlayer] = useState('');
 
   console.log('ALL TEAMS', clubTeams)
   console.log('ALL USERS', clubRoster)
@@ -34,6 +35,7 @@ export default function Admin() {
   const addPlayerTeam = (event) => {
     event.preventDefault();
     console.log('ADDPLAYER_TEAM', team)
+    console.log('ADDTEAM_PLAYER', player)
   }
 
   return (
@@ -79,12 +81,18 @@ export default function Admin() {
                       )
                     })}
                   </select>
+                  <input
+                  type='hidden'
+                  value={1}
+                  onChange={event => setPlayer(event.target.value)}
+                  />
                   <button 
                   className={style.playerbutton}  
                   type='submit'
                   >
                     Add
                   </button>
+
                 </form>
               </div>
               </div>
@@ -107,11 +115,11 @@ export default function Admin() {
                       <span className={style.contentname}>Team Name</span>
                     </label>
                  </div>
-                  <button 
-                   className={style.button}
-                   type='submit'>
-                     Submit
-                  </button>
+                <button 
+                  className={style.button}
+                  type='submit'>
+                    Submit
+                </button>
           </form>
     </div>
   )
