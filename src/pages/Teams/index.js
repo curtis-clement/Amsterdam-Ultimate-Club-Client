@@ -21,6 +21,8 @@ export default function Teams() {
     // setTeams();
   }
 
+  console.log('CLUB TEAMS', clubTeams)
+
   return (
     <div>
       <div>
@@ -34,6 +36,7 @@ export default function Teams() {
               <Team 
               id={team.id}
               name={team.name}
+              players={team.users}
               />
 
               <button
