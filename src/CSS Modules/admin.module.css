@@ -82,6 +82,24 @@
   transform: translateX(0%);
 }
 
+.playerbutton {
+  background-color: #333333;
+  color: #F2F2F2;
+  width: 10%;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  border-radius: 20px;
+}
+
+.playerbutton:hover {
+  color: #333333;
+  background-color: #F2F2F2;
+  border: 2px solid #D91F27;
+  border-radius: 20px;
+}
+
 .button {
   background-color: #333333;
   color: #F2F2F2;

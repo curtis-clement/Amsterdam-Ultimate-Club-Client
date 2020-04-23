@@ -1,18 +1,26 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllUsers} from '../../store/allusers/action';
+import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllUsers} from '../../store/allusers/selector';
+import {selectAllTeams} from '../../store/teams/selector';
 import {addTeam} from '../../store/teams/action';
 import style from '../../CSS Modules/admin.module.css';
-import {Link} from 'react-router-dom';
 
 export default function Admin() {
   const dispatch = useDispatch();
   const clubRoster = useSelector(selectAllUsers);
+  const clubTeams = useSelector(selectAllTeams);
   const [team, setTeam] = useState('');
+
+  console.log('ALL TEAMS', clubTeams)
 
   useEffect(() => {
     dispatch(fetchAllUsers())
+  }, [dispatch])
+
+  useEffect(() => {
+    dispatch(fetchAllTeams())
   }, [dispatch])
 
   const createTeam = (event) => {
@@ -35,8 +43,8 @@ export default function Admin() {
         <div className={style.player}>
           {clubRoster.map(player => {
             return (
+              <div key={player.id}>
               <div>
-              <div key={player.id} >
               <h5>{player.firstName} {player.lastName}</h5>
                 <ul>
                   <li>Email: {player.email}</li>
@@ -44,6 +52,18 @@ export default function Admin() {
                   <li>Gender: {player.gender}</li>
                   <li>Rating: {player.selfRating}</li>
                 </ul>
+
+                <select>
+                  <option>Select Team</option>
+                  {clubTeams.map(team => {
+                    return (
+                      <option key={team.id}>
+                        {team.name}
+                      </option>
+                    )
+                  })}
+                </select>
+                <button className={style.playerbutton}>Add</button>
               </div>
               </div>
             )
