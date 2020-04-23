@@ -65,13 +65,11 @@ export default function Admin() {
                       <span className={style.contentname}>Team Name</span>
                     </label>
                  </div>
-                <Link to={'/emaillist'}>
                   <button 
                    className={style.button}
                    type='submit'>
                      Submit
                   </button>
-                </Link>
           </form>
     </div>
   )
