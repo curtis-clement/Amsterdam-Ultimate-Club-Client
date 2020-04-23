@@ -40,8 +40,12 @@ export default function Teams() {
 
               <button
               className={style.button}
-              onClick={() => onDelete(team.id)}
-              >Delete</button>
+              onClick={() => { 
+                if (window.confirm('Are you sure you want to delete this team?')) 
+                onDelete(team.id) }}
+              >
+              Delete
+              </button>
             </div>
             </div>
           )

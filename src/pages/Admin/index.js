@@ -27,14 +27,17 @@ export default function Admin() {
 
   const createTeam = (event) => {
     event.preventDefault()
-    console.log('NEW TEAM', team);
-    console.log('ADD TEAM', addTeam)
     dispatch(addTeam(team));
     setTeam('');
   } 
 
+  const addPlayerTeam = (event) => {
+    event.preventDefault();
+    console.log('ADDPLAYER_TEAM', team)
+  }
+
   return (
-    <div>
+    <div className={style.body}>
       <div>
       <h1 className={style.header}>Administrative Panel</h1>
       </div>
@@ -60,17 +63,29 @@ export default function Admin() {
                   </li>
                 </ul>
 
-                <select>
-                  <option>Select Team</option>
-                  {clubTeams.map(team => {
-                    return (
-                      <option key={team.id}>
-                        {team.name}
-                      </option>
-                    )
-                  })}
-                </select>
-                <button className={style.playerbutton}>Add</button>
+                <form onSubmit={addPlayerTeam}>
+                  <select
+                  onChange={event => setTeam(event.target.value)}
+                  >
+                    <option>Select Team</option>
+                    {clubTeams.map(team => {
+                      return (
+                        <option 
+                        key={team.id}
+                        value={team.id}
+                        >
+                          {team.name}
+                        </option>
+                      )
+                    })}
+                  </select>
+                  <button 
+                  className={style.playerbutton}  
+                  type='submit'
+                  >
+                    Add
+                  </button>
+                </form>
               </div>
               </div>
             )
