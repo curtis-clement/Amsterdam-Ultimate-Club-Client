@@ -50,7 +50,7 @@ export default function Admin() {
         </div>
       </div>
         
-          <form className={style.addteam}>
+          <form className={style.addteam} onSubmit={createTeam}>
                <h3>Add Team</h3>
                 <div className={style.form} onSubmit={createTeam}>
                     <input 
