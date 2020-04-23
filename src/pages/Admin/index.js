@@ -6,6 +6,7 @@ import {selectAllUsers} from '../../store/allusers/selector';
 import {selectAllTeams} from '../../store/teams/selector';
 import {addTeam} from '../../store/teams/action';
 import style from '../../CSS Modules/admin.module.css';
+import PlayersTeams from '../../components/PlayersTeams';
 
 export default function Admin() {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ export default function Admin() {
   const [team, setTeam] = useState('');
 
   console.log('ALL TEAMS', clubTeams)
+  console.log('ALL USERS', clubRoster)
 
   useEffect(() => {
     dispatch(fetchAllUsers())
@@ -51,6 +53,11 @@ export default function Admin() {
                   <li>Phone: {player.phoneNumber}</li>
                   <li>Gender: {player.gender}</li>
                   <li>Rating: {player.selfRating}</li>
+                  <li>Current Teams: 
+                    <PlayersTeams 
+                    teams={player.teams}
+                    />
+                  </li>
                 </ul>
 
                 <select>
