@@ -36,7 +36,7 @@
   background-color: #F2F2F2;
   padding-left: 1%;
   padding-right: 1%;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 .infodiv h3 {
@@ -46,7 +46,7 @@
 .teampic {
   width: 50%;
   height: 50%;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 .mailing {
@@ -58,7 +58,7 @@
   padding-top: 1%;
   padding-right: 1%;
   padding-left: 1%;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 .button {
