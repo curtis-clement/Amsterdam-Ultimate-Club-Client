@@ -50,7 +50,7 @@ export default function Admin() {
         <div className={style.player}>
           {clubRoster.map(player => {
             return (
-              <div key={player.id}>
+              <form key={player.id} onSubmit={addPlayerTeam}>
               <div>
               <h5>{player.firstName} {player.lastName}</h5>
                 <ul>
@@ -63,11 +63,20 @@ export default function Admin() {
                     teams={player.teams}
                     />
                   </li>
+                  <li>{player.id}</li>
                 </ul>
+                {/* <input
+                  type='hidden'
+                  value={player}
+                  onChange={event => setPlayer(event.target.value)}
+                /> */}
 
-                <form onSubmit={addPlayerTeam}>
+                <div>
                   <select
-                  onChange={event => setTeam(event.target.value)}
+                  onChange={event => {
+                  setTeam(event.target.value)
+                  setPlayer(player.id)} 
+                  }
                   >
                     <option>Select Team</option>
                     {clubTeams.map(team => {
@@ -81,11 +90,6 @@ export default function Admin() {
                       )
                     })}
                   </select>
-                  <input
-                  type='hidden'
-                  value={1}
-                  onChange={event => setPlayer(event.target.value)}
-                  />
                   <button 
                   className={style.playerbutton}  
                   type='submit'
@@ -93,9 +97,9 @@ export default function Admin() {
                     Add
                   </button>
 
-                </form>
+                </div>
               </div>
-              </div>
+              </form>
             )
           })}
         </div>
