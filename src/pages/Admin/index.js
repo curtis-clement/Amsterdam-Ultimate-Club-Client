@@ -1,30 +1,45 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllUsers} from '../../store/allusers/action';
+import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllUsers} from '../../store/allusers/selector';
+import {selectAllTeams} from '../../store/teams/selector';
 import {addTeam} from '../../store/teams/action';
 import style from '../../CSS Modules/admin.module.css';
-import {Link} from 'react-router-dom';
+import PlayersTeams from '../../components/PlayersTeams';
 
 export default function Admin() {
   const dispatch = useDispatch();
   const clubRoster = useSelector(selectAllUsers);
+  const clubTeams = useSelector(selectAllTeams);
   const [team, setTeam] = useState('');
+  const [player, setPlayer] = useState('');
+
+  console.log('ALL TEAMS', clubTeams)
+  console.log('ALL USERS', clubRoster)
 
   useEffect(() => {
     dispatch(fetchAllUsers())
   }, [dispatch])
 
+  useEffect(() => {
+    dispatch(fetchAllTeams())
+  }, [dispatch])
+
   const createTeam = (event) => {
     event.preventDefault()
-    console.log('NEW TEAM', team);
-    console.log('ADD TEAM', addTeam)
     dispatch(addTeam(team));
     setTeam('');
   } 
 
+  const addPlayerTeam = (event) => {
+    event.preventDefault();
+    console.log('ADDPLAYER_TEAM', team)
+    console.log('ADDTEAM_PLAYER', player)
+  }
+
   return (
-    <div>
+    <div className={style.body}>
       <div>
       <h1 className={style.header}>Administrative Panel</h1>
       </div>
@@ -35,15 +50,50 @@ export default function Admin() {
         <div className={style.player}>
           {clubRoster.map(player => {
             return (
+              <div key={player.id}>
               <div>
-              <div key={player.id} >
               <h5>{player.firstName} {player.lastName}</h5>
                 <ul>
                   <li>Email: {player.email}</li>
                   <li>Phone: {player.phoneNumber}</li>
                   <li>Gender: {player.gender}</li>
                   <li>Rating: {player.selfRating}</li>
+                  <li>Current Teams: 
+                    <PlayersTeams 
+                    teams={player.teams}
+                    />
+                  </li>
                 </ul>
+
+                <form onSubmit={addPlayerTeam}>
+                  <select
+                  onChange={event => setTeam(event.target.value)}
+                  >
+                    <option>Select Team</option>
+                    {clubTeams.map(team => {
+                      return (
+                        <option 
+                        key={team.id}
+                        value={team.id}
+                        >
+                          {team.name}
+                        </option>
+                      )
+                    })}
+                  </select>
+                  <input
+                  type='hidden'
+                  value={1}
+                  onChange={event => setPlayer(event.target.value)}
+                  />
+                  <button 
+                  className={style.playerbutton}  
+                  type='submit'
+                  >
+                    Add
+                  </button>
+
+                </form>
               </div>
               </div>
             )
@@ -65,13 +115,11 @@ export default function Admin() {
                       <span className={style.contentname}>Team Name</span>
                     </label>
                  </div>
-                <Link to={'/emaillist'}>
-                  <button 
-                   className={style.button}
-                   type='submit'>
-                     Submit
-                  </button>
-                </Link>
+                <button 
+                  className={style.button}
+                  type='submit'>
+                    Submit
+                </button>
           </form>
     </div>
   )

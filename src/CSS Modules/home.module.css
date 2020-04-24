@@ -5,6 +5,10 @@
   bottom: 0;
 }
 
+.banner {
+  border-radius: 20px;
+}
+
 .footer {
   text-align: center;
   padding-top: 1rem;

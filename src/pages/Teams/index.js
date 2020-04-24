@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllTeams} from '../../store/teams/selector';
@@ -30,16 +30,23 @@ export default function Teams() {
       <div>
          {clubTeams.map(team => {
           return (
-            <div key={team.id}>
-              <Team 
+            <div className={style.allteams}>
+            <div key={team.id} className={style.team}>
+              <Team
               id={team.id}
               name={team.name}
+              players={team.users}
               />
 
               <button
               className={style.button}
-              onClick={() => onDelete(team.id)}
-              >Delete</button>
+              onClick={() => { 
+                if (window.confirm('Are you sure you want to delete this team?')) 
+                onDelete(team.id) }}
+              >
+              Delete
+              </button>
+            </div>
             </div>
           )
         })}

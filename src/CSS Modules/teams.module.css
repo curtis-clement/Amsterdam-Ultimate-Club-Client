@@ -11,10 +11,27 @@
   border-radius: 5px;
 }
 
+.allteams {
+  width: 50%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.team {
+  background-color: #f2f2f2;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
 .button {
   background-color: #333333;
   color: #F2F2F2;
-  width: 20%;
+  width: 30%;
   margin-top: 1em;
   padding: 8px 0px;
   font-size: 1em;
