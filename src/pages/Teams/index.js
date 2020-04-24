@@ -22,7 +22,7 @@ export default function Teams() {
   }
 
   return (
-    <div>
+    <div className={style.body}>
       <div>
       <h1 className={style.header}>Current AUC Club Teams</h1>
       </div>
