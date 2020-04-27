@@ -61,9 +61,9 @@
   font-size: 40px;
 }
 
-.linkbody {
+.linkbody1 {
   width: 40%;
-  margin-left: 2.5%;
+  margin-left: 5%;
   margin-right: 2.5%;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -74,11 +74,29 @@
   border-radius: 5px;
 }
 
+.linkbody2 {
+  width: 40%;
+  margin-left: 2.5%;
+  margin-right: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #f2f2f2;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+.externallink a {
+  text-decoration: underline;
+  color: #d91f27
+}
+
 .linkbody h4 {
   text-decoration: underline;
 }
 
 .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }

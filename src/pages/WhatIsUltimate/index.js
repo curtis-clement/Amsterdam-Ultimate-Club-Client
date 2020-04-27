@@ -66,16 +66,16 @@ export default function WhatIsUltimate() {
           <hr className={style.line}/>
         </div>
         <div className={style.links}>
-          <div className={style.linkbody}>
-            <h4> <a href='http://www.wfdf.org/'>WFDF</a></h4>
+          <div className={style.linkbody1}>
+            <h4 className={style.externallink}> <a href='http://www.wfdf.org/'>WFDF</a></h4>
             <p>
               World Flying Disc Federation (or WFDF) is the governing body of Ultimate world wide outside of the United States (goverend by USAU)
               For the full rules, news, and updates on ultimate around the world, check them out!
             </p>
           </div>
 
-          <div className={style.linkbody}> 
-            <h4> <a href='https://theaudl.com/'>AUDL</a></h4>
+          <div className={style.linkbody2}> 
+            <h4 className={style.externallink}> <a href='https://theaudl.com/'>AUDL</a></h4>
             <p>The American Ultimate Disc League is current professional North American ultiamte league.</p>
           </div>
         </div>
