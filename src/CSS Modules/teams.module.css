@@ -15,12 +15,13 @@
   border-radius: 5px;
 }
 
-.allteams {
-  width: 50%;
+.teamlist {
   display: flex;
-  margin: auto;
   justify-content: space-around;
-  text-align: center;
+}
+
+.allteams {
+  width: 20%;
 }
 
 .team {

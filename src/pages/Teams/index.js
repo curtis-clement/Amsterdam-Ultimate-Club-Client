@@ -27,7 +27,7 @@ export default function Teams() {
       <h1 className={style.header}>Current AUC Club Teams</h1>
       </div>
       <hr className={style.line}/>
-      <div>
+      <div className={style.teamlist}>
          {clubTeams.map(team => {
           return (
             <div className={style.allteams}>
