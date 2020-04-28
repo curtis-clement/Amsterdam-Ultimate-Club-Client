@@ -53,7 +53,7 @@ export default function Admin() {
               <form key={player.id} onSubmit={addPlayerTeam}>
               <div>
               <h5>{player.firstName} {player.lastName}</h5>
-                <ul>
+                <ul className={style.ul}>
                   <li>Email: {player.email}</li>
                   <li>Phone: {player.phoneNumber}</li>
                   <li>Gender: {player.gender}</li>
@@ -63,13 +63,7 @@ export default function Admin() {
                     teams={player.teams}
                     />
                   </li>
-                  <li>{player.id}</li>
                 </ul>
-                {/* <input
-                  type='hidden'
-                  value={player}
-                  onChange={event => setPlayer(event.target.value)}
-                /> */}
 
                 <div>
                   <select

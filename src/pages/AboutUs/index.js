@@ -12,8 +12,11 @@ export default function AboutUs() {
         <hr className={style.line}/>
       </div>
 
-      <div className={style.picdiv}>
-        <img className={style.teampic} src={teampic} alt='Team' />
+      <container className={style.info}>
+        <div>
+          <img className={style.teampic} src={teampic} alt='Team' />
+        </div>
+
         <div className={style.infodiv}>
           <h3>Welcome - We are glad you found us!</h3>
           <p>Amsterdam Ultimate Club (Or AUC) is an ultimate frisbee club based in Amsterdam. Founded in 1991 and originally 
@@ -33,17 +36,19 @@ export default function AboutUs() {
             this amazing sport we love!
           </p>
         </div>
-      </div>
+      </container>
       <br />
-
-      <div className={style.mailing}>
-          <h4>If you would like details on current AUC happenings please joing out mailing list here!</h4>
-          <br/>
-          <Link to={'/emaillist'}>
-            <button className={style.button}>I Want to be Informed!</button>
-          </Link>
-      </div> 
       </div>
+
+      <container className={style.mailing}>
+        <div className={style.text}>
+            <h4>If you would like details on current AUC happenings please join our mailing list here!</h4>
+            <br/>
+            <Link to={'/emaillist'}>
+              <button className={style.button}>I Want to be Informed!</button>
+            </Link>
+        </div>
+      </container>
     </div>
   )
 };
