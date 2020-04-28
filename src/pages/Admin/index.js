@@ -5,6 +5,7 @@ import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllUsers} from '../../store/allusers/selector';
 import {selectAllTeams} from '../../store/teams/selector';
 import {addTeam} from '../../store/teams/action';
+import {updatePlayerTeam} from '../../store/admin/action';
 import style from '../../CSS Modules/admin.module.css';
 import PlayersTeams from '../../components/PlayersTeams';
 
@@ -14,9 +15,6 @@ export default function Admin() {
   const clubTeams = useSelector(selectAllTeams);
   const [team, setTeam] = useState('');
   const [player, setPlayer] = useState('');
-
-  console.log('ALL TEAMS', clubTeams)
-  console.log('ALL USERS', clubRoster)
 
   useEffect(() => {
     dispatch(fetchAllUsers())
@@ -36,6 +34,8 @@ export default function Admin() {
     event.preventDefault();
     console.log('ADDPLAYER_TEAM', team)
     console.log('ADDTEAM_PLAYER', player)
+    dispatch(updatePlayerTeam(team, player));
+
   }
 
   return (
