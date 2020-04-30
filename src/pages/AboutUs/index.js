@@ -6,14 +6,13 @@ import teampic from '../../images/teampic.jpg';
 export default function AboutUs() {
   return (
     <div className={style.body}>
-      <div className={style.items}>
       <div>
         <h1 className={style.header}>About Our Club</h1>
         <hr className={style.line}/>
       </div>
 
       <container className={style.info}>
-        <div>
+        <div className={style.picdiv}>
           <img className={style.teampic} src={teampic} alt='Team' />
         </div>
 
@@ -37,8 +36,6 @@ export default function AboutUs() {
           </p>
         </div>
       </container>
-      <br />
-      </div>
 
       <container className={style.mailing}>
         <div className={style.text}>
