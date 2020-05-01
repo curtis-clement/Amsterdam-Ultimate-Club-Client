@@ -46,7 +46,7 @@ export default function Admin() {
       <hr className={style.line}/>
 
       <div className={style.roster}>
-      <h3>Roster</h3>
+      <h3 className={style.h3}>Roster</h3>
         <div className={style.player}>
           {clubRoster.map(player => {
             return (

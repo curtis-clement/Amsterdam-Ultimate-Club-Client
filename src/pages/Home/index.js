@@ -2,6 +2,9 @@ import React from 'react';
 import style from '../../CSS Modules/home.module.css';
 import auc from '../../images/auc.jpg';
 import aucbanner from '../../images/emailauclogo.jpg';
+import codaisseur from '../../images/codaisseur.jpg';
+import mad from '../../images/MAD.jpg';
+import foeders from '../../images/foeders.jpg';
 
 export default function Home() {
   return (
@@ -17,7 +20,21 @@ export default function Home() {
         className={style.image}
         src={auc} alt='AUC Club' />
       </div>
-      <h2 className={style.footer}>Where we like to have a dam good time!</h2>
+      <h2 className={style.footer}>A big thank you to our generous sponsors!</h2>
+      <br/>
+      <div className={style.sponsors}>
+        <div className={style.imagediv}>
+        <img className={style.logoimg} src={codaisseur} alt='Codaisseur'/>
+        </div>
+
+        <div className={style.imagediv}>
+        <img className={style.logoimg} src={mad} alt='MAD'/>
+        </div>
+
+        <div className={style.imagediv}>
+        <img className={style.logoimg} src={foeders} alt='Foeders'/>
+        </div>
+      </div>
     </div>
   )
 }
