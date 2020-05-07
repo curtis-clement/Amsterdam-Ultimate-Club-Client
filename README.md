@@ -30,7 +30,7 @@ npm start
 ## What This App is For
 This application is (in the processes of being) designed for Amsterdam Ultimate Club which is an Ultimate Frisbee club based in Amsterdam at Sportpark Drieburg. The main goals of this application are:
   - To provide information about AUC and the Ultimate community at large
-  - To allow anyone to joint he AUC mailing list
+  - To allow anyone to joint the AUC mailing list
   - To allow a new member to sign up to be part of the club
   - To allow the creation of new teams and the ability to assign players to teams
   - To display current teams
