@@ -15,14 +15,14 @@ export default function Navigation() {
   const loginLogoutControls = token ? <LoggedIn /> : <LoggedOut />;
 
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand as={NavLink} to="/">
+    <Navbar expand="lg" className={style.heading}>
+      <Navbar.Brand as={NavLink} to="/" className={style.club}>
         Amsterdam Ultimate Club
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={style.nav} fill>
-          <NavbarItem path="/" linkText="Home" />
+          <NavbarItem path="/" exact linkText="Home" />
           <NavbarItem path="/aboutus" linkText="About Us" />
           <NavbarItem path="/whatisultimate" linkText="What Is Ultimate" />
           {/* <NavbarItem path="/cityleague" linkText="City League" /> */}

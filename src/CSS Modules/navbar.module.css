@@ -1,25 +1,18 @@
+.club {
+  text-decoration: underline;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.heading {
+  background-color: #F2F2F2;
+}
 
 .nav {
   width: 100%;
-  background-color: #F2F2F2;
 }
+
+/* .active {
+  text-decoration: underline;
+} */
 
 .nav button {
   background-color: #333333;
