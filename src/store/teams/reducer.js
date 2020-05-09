@@ -9,8 +9,12 @@ export default (state = initialState, action) => {
     case FETCH_ALL_TEAMS:
       return [...action.payload];
 
-    case ADD_NEW_TEAM:
-      return [...state, action.payload];
+    // Team is being added by name not by id so back end needs
+    // to be updated to send ID as well as team name?
+    
+    // case ADD_NEW_TEAM:
+    //   console.log('STATE', state)
+    //   return [...state, action.payload];
 
     case DELETE_TEAM:
       const teamId = action.payload;
