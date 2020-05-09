@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchAllTeams} from '../../store/teams/action';
 import {selectAllTeams} from '../../store/teams/selector';
-import {deleteTeamSuccess} from '../../store/admin/action';
+import {deleteTeamSuccess} from '../../store/teams/action';
 import Team from '../../components/Team';
 import style from '../../CSS Modules/teams.module.css';
 

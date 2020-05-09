@@ -8,6 +8,7 @@ import {
 
 export const ADD_NEW_TEAM = 'ADD_NEW_TEAM';
 export const FETCH_ALL_TEAMS = 'FETCH_ALL_TEAMS';
+export const DELETE_TEAM = 'DELETE_TEAM';
 
 function allTeamsFetched(teams) {
   return {
@@ -17,7 +18,7 @@ function allTeamsFetched(teams) {
 }
 
 export const fetchAllTeams = () => {
-  return async(dispatch, getState) => {
+  return async(dispatch) => {
     dispatch(appLoading)
     try {
       const response = await axios.get(`${apiUrl}/teams`)
@@ -31,13 +32,13 @@ export const fetchAllTeams = () => {
 
 const addNewTeam = (data) => {
   return {
-    type: ADD_NEW_TEAM,
+    type: 'ADD_NEW_TEAM',
     payload: data
   }
 };
 
 export const addTeam = (name) => {
-  return async (dispatch, getState) => {
+  return async (dispatch) => {
     const response = axios.post(`${apiUrl}/teams/createteam`,
     {
       name
@@ -46,4 +47,22 @@ export const addTeam = (name) => {
     dispatch(showMessageWithTimeout('Success!', false, 'Posted!', 3000));
     dispatch(appDoneLoading())
   }
-}
+};
+
+export const deleteTeam = (team) => ({
+  type: 'DELETE_TEAM',
+  payload: team
+});
+
+export const deleteTeamSuccess = teamId => {
+  return async (dispatch, getState) => {
+    try {
+      const response = await axios.delete(`${apiUrl}/teams/deleteteam/${teamId}`)
+      console.log('TEAM DELETED', response.data)
+      dispatch(deleteTeam(teamId));
+      //dispatch(fetchAllTeams());
+    } catch(error) {
+      console.log(error.message)
+    };
+  }
+};

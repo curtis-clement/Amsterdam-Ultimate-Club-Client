@@ -32,8 +32,6 @@ export default function Admin() {
 
   const addPlayerTeam = (event) => {
     event.preventDefault();
-    console.log('ADDPLAYER_TEAM', team)
-    console.log('ADDTEAM_PLAYER', player)
     dispatch(updatePlayerTeam(team, player));
 
   }
