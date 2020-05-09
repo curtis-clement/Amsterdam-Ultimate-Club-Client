@@ -12,7 +12,7 @@ export const DELETE_TEAM = 'DELETE_TEAM';
 
 function allTeamsFetched(teams) {
   return {
-    type: 'FETCH_ALL_TEAMS',
+    type: FETCH_ALL_TEAMS,
     payload: teams 
   };
 }

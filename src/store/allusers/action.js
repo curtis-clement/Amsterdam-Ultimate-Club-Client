@@ -14,7 +14,6 @@ export const fetchAllUsers = () => {
     dispatch(appLoading)
     try {
       const response = await axios.get(`${apiUrl}/users`)
-      console.log('WHAT IS DATA', response.data.users)
       dispatch(allUsersFetched(response.data.users));
     } catch(error) {
       console.log(error.message);
