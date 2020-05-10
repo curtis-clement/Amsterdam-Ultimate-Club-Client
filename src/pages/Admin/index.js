@@ -37,11 +37,11 @@ export default function Admin() {
   }
 
   return (
-    <div className={style.body}>
-      <div>
+    <main className={style.body}>
+      <header>
       <h1 className={style.header}>Administrative Panel</h1>
-      </div>
       <hr className={style.line}/>
+      </header>
 
       <div className={style.roster}>
       <h3 className={style.h3}>Roster</h3>
@@ -117,7 +117,7 @@ export default function Admin() {
                     Submit
                 </button>
           </form>
-    </div>
+    </main>
   )
 }
 
