@@ -37,19 +37,19 @@ export default function Admin() {
   }
 
   return (
-    <div className={style.body}>
-      <div>
+    <main className={style.body}>
+      <header>
       <h1 className={style.header}>Administrative Panel</h1>
-      </div>
       <hr className={style.line}/>
+      </header>
 
-      <div className={style.roster}>
+      <section className={style.roster}>
       <h3 className={style.h3}>Roster</h3>
-        <div className={style.player}>
+        <div>
           {clubRoster.map(player => {
             return (
-              <form key={player.id} onSubmit={addPlayerTeam}>
-              <div>
+              <form className={style.player} key={player.id} onSubmit={addPlayerTeam}>
+              <div className={style.playerbox}>
               <h5>{player.firstName} {player.lastName}</h5>
                 <ul className={style.ul}>
                   <li>Email: {player.email}</li>
@@ -95,7 +95,7 @@ export default function Admin() {
             )
           })}
         </div>
-      </div>
+      </section>
         
           <form className={style.addteam} onSubmit={createTeam}>
                <h3>Add Team</h3>
@@ -117,7 +117,7 @@ export default function Admin() {
                     Submit
                 </button>
           </form>
-    </div>
+    </main>
   )
 }
 
