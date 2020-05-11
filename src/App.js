@@ -13,6 +13,7 @@ import WhatIsUltimate from './pages/WhatIsUltimate';
 import CityLeague from './pages/CityLeague';
 import Teams from './pages/Teams';
 import Admin from './pages/Admin';
+import Gear from './pages/Gear';
 
 import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/whatisultimate" component={WhatIsUltimate} />
         <Route path="/cityleague" component={CityLeague} />
+        <Route path='/gear' component={Gear} />
         <Route path="/teams" component={Teams} />
         <Route path="/admin" component={Admin} />
         <Route path="/signup" component={SignUp} />
