@@ -1,4 +1,5 @@
 import React from 'react'
+import style from '../../CSS Modules/admin.module.css';
 
 export default function PlayersTeams(props) {
   
@@ -6,7 +7,9 @@ export default function PlayersTeams(props) {
     <div>
       {props.teams.map(team => {
         return(
-          team.name
+          <ul className={style.ul}>
+            <li>{team.name}</li>
+          </ul>
         )
       })}
     </div>

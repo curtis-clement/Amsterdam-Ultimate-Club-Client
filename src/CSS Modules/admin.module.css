@@ -32,6 +32,10 @@
   background-color: #ffffff;
 }
 
+.playername {
+  text-decoration: underline;
+}
+
 .player {
   width: 30%;
   margin: 1%;

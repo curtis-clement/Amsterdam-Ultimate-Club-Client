@@ -50,7 +50,7 @@ export default function Admin() {
             return (
               <form className={style.player} key={player.id} onSubmit={addPlayerTeam}>
               <div className={style.playerbox}>
-              <h5>{player.firstName} {player.lastName}</h5>
+              <h5 className={style.playername}>{player.firstName} {player.lastName}</h5>
                 <ul className={style.ul}>
                   <li>Email: {player.email}</li>
                   <li>Phone: {player.phoneNumber}</li>
