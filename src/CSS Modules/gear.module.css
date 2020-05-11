@@ -1,0 +1,21 @@
+.header {
+  font-size: 50px;
+  text-align: center;
+  padding-top: .4cm;
+}
+
+.line {
+  align-items: center;
+  width: 80%;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+.info {
+  width: 60%;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  text-align: center;
+  margin: auto;
+}
