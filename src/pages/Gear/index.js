@@ -1,6 +1,11 @@
 import React from 'react';
 import style from '../../CSS Modules/gear.module.css';
 
+import darkfront from '../../images/gear/darkjerseyfront.jpg';
+import darkback from '../../images/gear/darkjerseyback.jpg';
+import darkleftslv from '../../images/gear/darkjerseylslv.jpg';
+import darkrightslv from '../../images/gear/darkjerseyrslv.jpg';
+
 export default function Gear() {
   return (
     <main>
@@ -25,6 +30,16 @@ export default function Gear() {
               <a href='https://www.9upultimate.com/'> 9UP website</a>.
             </p>
         </div> 
+      </section>
+        <div>
+          <h3>Dark Jersey</h3>
+          <img src={darkfront} alt='Dark Front'/>
+          <img src={darkback} alt='Dark Back'/>
+          <img src={darkleftslv} alt='Dark Left Sleeve'/>
+          <img src={darkrightslv} alt='Dark Right Sleeve'/>
+        </div>
+      <section>
+
       </section>
     </main>
   )
