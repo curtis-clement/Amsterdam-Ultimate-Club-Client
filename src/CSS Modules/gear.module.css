@@ -23,3 +23,7 @@
   text-align: center;
   margin: auto;
 }
+
+.slides {
+  display: flex;
+}

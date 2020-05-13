@@ -1,5 +1,6 @@
 import React from 'react';
 import {Fade} from 'react-slideshow-image';
+import style from '../../CSS Modules/slideshow.module.css';
 
 import darkfront from '../../images/gear/darkjerseyfront.jpg';
 import darkback from '../../images/gear/darkjerseyback.jpg';
@@ -26,7 +27,7 @@ const lightImages = [
 ]
 
 const fadeProperties = {
-  duration: 5000,
+  duration: 5000000,
   transitionDuration: 500,
   infinite: false,
   indicators: true,
@@ -37,31 +38,27 @@ const fadeProperties = {
 
 export const DarkJersey = () => {
   return (
-    <div className="slide-container">
+    <div className={style.slidecontainer}>
       <Fade {...fadeProperties}>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={darkImages[0]} alt='Dark Front'/>
           </div>
-          <h2>First Slide</h2>
         </div>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={darkImages[1]} alt='Dark Back'/>
           </div>
-          <h2>Second Slide</h2>
         </div>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={darkImages[2]} alt='Left Sleeve'/>
           </div>
-          <h2>Third Slide</h2>
         </div>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={darkImages[3]} alt='Right Sleeve'/>
           </div>
-          <h2>Fourth Slide</h2>
         </div>
       </Fade>
     </div>
@@ -70,25 +67,25 @@ export const DarkJersey = () => {
 
 export const LightJersey = () => {
   return (
-    <div className="slide-container">
+    <div className={style.slidecontainer}>
       <Fade {...fadeProperties}>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={lightImages[0]} alt='Dark Front'/>
           </div>
         </div>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={lightImages[1]} alt='Dark Back'/>
           </div>
         </div>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={lightImages[2]} alt='Left Sleeve'/>
           </div>
         </div>
-        <div className="each-fade">
-          <div className="image-container">
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
             <img src={lightImages[3]} alt='Right Sleeve'/>
           </div>
         </div>

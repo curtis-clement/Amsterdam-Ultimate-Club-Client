@@ -1,0 +1,26 @@
+.slidecontainer {
+  width: 46%;
+  margin: 2%; 
+}
+
+.eachfade {
+  display: flex;
+}
+
+.eachfade .imagecontainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.eachfade .imagecontainer img {
+  width: 100%;
+}
+
+.eachfade {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}

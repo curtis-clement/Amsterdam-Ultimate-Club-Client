@@ -30,10 +30,10 @@ export default function Gear() {
         </div> 
 
       </section>
+
+      <section className={style.slides}>
         <DarkJersey />
         <LightJersey />
-      <section>
-
       </section>
     </main>
   )
