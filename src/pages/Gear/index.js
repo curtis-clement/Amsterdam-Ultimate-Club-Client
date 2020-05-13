@@ -1,10 +1,7 @@
 import React from 'react';
 import style from '../../CSS Modules/gear.module.css';
 
-import darkfront from '../../images/gear/darkjerseyfront.jpg';
-import darkback from '../../images/gear/darkjerseyback.jpg';
-import darkleftslv from '../../images/gear/darkjerseylslv.jpg';
-import darkrightslv from '../../images/gear/darkjerseyrslv.jpg';
+import {DarkJersey} from '../../components/SlideShows';
 
 export default function Gear() {
   return (
@@ -27,17 +24,12 @@ export default function Gear() {
               be submitted. If you would like to be notified of when we will be ordering new gear please
               subscribe to our mailing list by click (here - add link to AUC Mailing list form).
               If you would like to see additional pictures of their products you can visit the 
-              <a href='https://www.9upultimate.com/'> 9UP website</a>.
+              <a className={style.link} href='https://www.9upultimate.com/'> 9UP website</a>.
             </p>
         </div> 
+
       </section>
-        <div>
-          <h3>Dark Jersey</h3>
-          <img src={darkfront} alt='Dark Front'/>
-          <img src={darkback} alt='Dark Back'/>
-          <img src={darkleftslv} alt='Dark Left Sleeve'/>
-          <img src={darkrightslv} alt='Dark Right Sleeve'/>
-        </div>
+        <DarkJersey />
       <section>
 
       </section>
