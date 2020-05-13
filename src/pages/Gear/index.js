@@ -2,6 +2,7 @@ import React from 'react';
 import style from '../../CSS Modules/gear.module.css';
 
 import {DarkJersey} from '../../components/SlideShows';
+import {LightJersey} from '../../components/SlideShows';
 
 export default function Gear() {
   return (
@@ -30,6 +31,7 @@ export default function Gear() {
 
       </section>
         <DarkJersey />
+        <LightJersey />
       <section>
 
       </section>
