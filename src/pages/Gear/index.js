@@ -37,6 +37,100 @@ export default function Gear() {
         <LightJersey />
         <Shorts />
       </section>
+
+      <section className={style.slides}>
+        <div className={style.formbox}>
+        <form className={style.form}>
+          <label>Size</label>
+            <select>
+              <option>Select Size</option>
+              <option value={'XS'}>XS</option>
+              <option value={'S'}>S</option> 
+              <option value={'M'}>M</option>
+              <option value={'L'}>L</option> 
+              <option value={'XL'}>XL</option>   
+            </select> 
+          <label>Sex</label>
+            <select>
+              <option>Select Sex</option>
+              <option value={'F'}>F</option>
+              <option value={'M'}>M</option>
+            </select>
+          <label>Quantity</label>
+            <input 
+            type='number'
+            />
+          <label>Number</label>
+            <input 
+            type='text'
+            />
+          <label>Name On Jersey</label>
+            <input 
+            type='text'
+            />
+        </form>
+        </div>
+
+        <div className={style.formbox}>
+        <form className={style.form}>
+          <label>Size</label>
+            <select>
+              <option>Select Size</option>
+              <option value={'XS'}>XS</option>
+              <option value={'S'}>S</option> 
+              <option value={'M'}>M</option>
+              <option value={'L'}>L</option> 
+              <option value={'XL'}>XL</option>   
+            </select> 
+          <label>Sex</label>
+            <select>
+              <option>Select Sex</option>
+              <option value={'F'}>F</option>
+              <option value={'M'}>M</option>
+            </select>
+          <label>Quantity</label>
+            <input 
+            type='number'
+            />
+          <label>Number</label>
+            <input 
+            type='text'
+            />
+          <label>Name On Jersey</label>
+            <input 
+            type='text'
+            />
+        </form>
+        </div>
+
+        <div className={style.formbox}>
+        <form className={style.form}>
+          <label>Size</label>
+            <select>
+              <option>Select Size</option>
+              <option value={'XS'}>XS</option>
+              <option value={'S'}>S</option> 
+              <option value={'M'}>M</option>
+              <option value={'L'}>L</option> 
+              <option value={'XL'}>XL</option>   
+            </select> 
+          <label>Sex</label>
+            <select>
+              <option>Select Sex</option>
+              <option value={'F'}>F</option>
+              <option value={'M'}>M</option>
+            </select>
+          <label>Quantity</label>
+            <input 
+            type='number'
+            />
+          <label>Number</label>
+            <input 
+            type='text'
+            />
+        </form>
+        </div>
+      </section>
     </main>
   )
 }

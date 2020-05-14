@@ -32,3 +32,12 @@ B 242
   -Admin can add and remove players from teams
   -Admins can assign captain(s)
 
+** ORDERS **
+
+Order Model
+- Item
+- Size
+- Gender
+- Quantity
+- Number
+- Name
