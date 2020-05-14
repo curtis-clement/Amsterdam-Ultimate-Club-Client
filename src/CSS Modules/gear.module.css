@@ -28,3 +28,19 @@
 .slides {
   display: flex;
 }
+
+.formbox {
+  width: 33%;
+}
+
+.form {
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #333333;
+}
