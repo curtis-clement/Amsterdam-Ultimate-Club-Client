@@ -12,6 +12,9 @@ import lightback from '../../images/gear/lightjerseyback.jpg';
 import lightleftslv from '../../images/gear/lightjerseylslv.jpg';
 import lightrightslv from '../../images/gear/lightjerseyrslv.jpg';
 
+import shortsfront from '../../images/gear/shortsfront.jpg';
+import shortsback from '../../images/gear/shortsback.jpg'
+
 const darkImages = [
   darkfront,
   darkback,
@@ -24,6 +27,11 @@ const lightImages = [
   lightback,
   lightleftslv,
   lightrightslv
+]
+
+const shortsImages = [
+  shortsfront,
+  shortsback
 ]
 
 const fadeProperties = {
@@ -71,12 +79,12 @@ export const LightJersey = () => {
       <Fade {...fadeProperties}>
         <div className={style.eachfade}>
           <div className={style.imagecontainer}>
-            <img src={lightImages[0]} alt='Dark Front'/>
+            <img src={lightImages[0]} alt='Light Front'/>
           </div>
         </div>
         <div className={style.eachfade}>
           <div className={style.imagecontainer}>
-            <img src={lightImages[1]} alt='Dark Back'/>
+            <img src={lightImages[1]} alt='Light Back'/>
           </div>
         </div>
         <div className={style.eachfade}>
@@ -87,6 +95,25 @@ export const LightJersey = () => {
         <div className={style.eachfade}>
           <div className={style.imagecontainer}>
             <img src={lightImages[3]} alt='Right Sleeve'/>
+          </div>
+        </div>
+      </Fade>
+    </div>
+  )
+}
+
+export const Shorts = () => {
+  return (
+    <div className={style.slidecontainer}>
+      <Fade {...fadeProperties}>
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
+            <img src={shortsImages[0]} alt='Shorts Front'/>
+          </div>
+        </div>
+        <div className={style.eachfade}>
+          <div className={style.imagecontainer}>
+            <img src={shortsImages[1]} alt='Shorts Back'/>
           </div>
         </div>
       </Fade>
