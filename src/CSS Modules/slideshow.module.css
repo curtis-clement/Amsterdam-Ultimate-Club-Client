@@ -1,19 +1,22 @@
 .slidecontainer {
-  width: 46%;
-  margin: 2%; 
+  width: 30%;
+  margin: 1%; 
+  justify-items: center;
+  text-align: center;
+  align-items: center;
 }
 
-.eachfade {
-  display: flex;
-}
-
-.eachfade .imagecontainer {
+.imagecontainer {
   width: 100%;
   overflow: hidden;
+  justify-content: center;
 }
 
-.eachfade .imagecontainer img {
+.imagecontainer img {
   width: 100%;
+  margin: auto;
+  justify-self: center;
+  border-radius: 5px;
 }
 
 .eachfade {
@@ -21,6 +24,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  background: #adceed;
+  margin: auto;
 }

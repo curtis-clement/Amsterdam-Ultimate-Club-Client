@@ -3,6 +3,7 @@ import style from '../../CSS Modules/gear.module.css';
 
 import {DarkJersey} from '../../components/SlideShows';
 import {LightJersey} from '../../components/SlideShows';
+import {Shorts} from '../../components/SlideShows';
 
 export default function Gear() {
   return (
@@ -34,6 +35,7 @@ export default function Gear() {
       <section className={style.slides}>
         <DarkJersey />
         <LightJersey />
+        <Shorts />
       </section>
     </main>
   )
